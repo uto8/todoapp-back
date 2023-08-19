@@ -24,7 +24,7 @@ func router() *gin.Engine {
 		u.DELETE("/:id", ctrl.Delete)
 	}
 
-	p := r.Group("/posts")
+	p := r.Group("/todos")
 	{
 		ctrl := controllers.PostController{}
 		p.GET("", ctrl.Index)
