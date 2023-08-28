@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"uto8/todoapp-back/router"
 
 	jwt "github.com/appleboy/gin-jwt/v2"
 	"github.com/gin-gonic/gin"
@@ -37,10 +38,10 @@ type User struct {
 
 func main() {
 	dsn := "root:password@tcp(mysql_db)/dev?charset=utf8mb4&parseTime=True&loc=Local"
-	db, _ := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	_, _ = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	port := os.Getenv("PORT")
-	r := gin.Default()
+	r := router.SetupRouter()
 
 	if port == "" {
 		port = "8000"

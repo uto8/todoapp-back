@@ -3,16 +3,14 @@ module uto8/todoapp-back
 go 1.20
 
 require (
+	github.com/appleboy/gin-jwt/v2 v2.9.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/katsuomi/gin-like-twitter-api v0.0.0-20200316102212-b5e1567e3fcd
 	gorm.io/driver/mysql v1.5.1
 	gorm.io/gorm v1.25.3
 )
 
-require (
-	github.com/appleboy/gin-jwt/v2 v2.9.1 // indirect
-	github.com/golang-jwt/jwt/v4 v4.4.3 // indirect
-)
+require github.com/golang-jwt/jwt/v4 v4.4.3 // indirect
 
 require (
 	github.com/bytedance/sonic v1.9.1 // indirect
@@ -25,7 +23,7 @@ require (
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/golang-jwt/jwt/v5 v5.0.0
-	github.com/jinzhu/gorm v1.9.16 // indirect
+	github.com/jinzhu/gorm v1.9.16
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect

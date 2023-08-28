@@ -8,11 +8,11 @@ import (
 )
 
 func Run() {
-	router := setupRouter()
+	router := SetupRouter()
 	router.Run()
 }
 
-func setupRouter() *gin.Engine {
+func SetupRouter() *gin.Engine {
 	router := gin.Default()
 	handler := &controllers.Handler{
 		DB: database.GetDB(),
